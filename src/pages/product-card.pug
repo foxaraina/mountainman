@@ -1,0 +1,118 @@
+extends ../template/layout
+include ../blocks/modal/mixin
+
+block variables
+    -
+        var title = 'Mountainman'
+
+
+block content
+    .product-card
+        .product-card__inner
+            .product-card__body
+                .product-card__gallery
+                    .product-card__gallery-thumbs
+                        a.js-product-card-thumb.current(href='#' data-srcset='img/product-card/product-big.jpg 1x, img/product-card/product-big@2x.jpg 2x' data-src='img/product-card/product-big.jpg')
+                            +srcsetRetinaImg('img/product-card/product-small-1', 'jpg', 130, 130, 'img/placeholder-130.svg')
+                        a.js-product-card-thumb(href='#' data-srcset='img/product-card/product-small-1.jpg 1x, img/product-card/product-small-1@2x.jpg 2x' data-src='img/product-card/product-small-1.jpg')
+                            +srcsetRetinaImg('img/product-card/product-small-2', 'jpg', 130, 130, 'img/placeholder-130.svg')
+                        a.js-product-card-thumb(href='#' data-srcset='img/product-card/product-big.jpg 1x, img/product-card/product-big@2x.jpg 2x' data-src='img/product-card/product-big.jpg')
+                            +srcsetRetinaImg('img/product-card/product-small-3', 'jpg', 130, 130, 'img/placeholder-130.svg')
+                    .product-card__gallery-big
+                        a(href='img/product-card/product-big.jpg')
+                            +srcsetRetinaImg('img/product-card/product-big', 'jpg', 640, 640, 'img/placeholder-130.svg')
+                .product-card__content
+                    .product-card__top
+                        h1.title.title--md Сноубордическое худи "MARSHMALLOW"
+                        .product-card__btand MountainMan
+                        .product-card__code Артикул: 1234567
+                        .product-card__price 13 050 ₽
+                        .product-card___sizes
+                            .product-card__sizes-name Размер
+                            .product-card__sizes-list
+                                .product-card__sizes-item
+                                    input(type='radio' id='product-size-1')
+                                    label(for='product-size-1') XS
+                                .product-card__sizes-item
+                                    input(type='radio' id='product-size-2')
+                                    label(for='product-size-2') S
+                                .product-card__sizes-item
+                                    input(type='radio' id='product-size-3')
+                                    label(for='product-size-3') M
+                                .product-card__sizes-item
+                                    input(type='radio' id='product-size-4')
+                                    label(for='product-size-4') L
+                                .product-card__sizes-item
+                                    input(type='radio' id='product-size-5')
+                                    label(for='product-size-5') XL
+                                .product-card__sizes-item
+                                    input(type='radio' id='product-size-6')
+                                    label(for='product-size-6') XXL
+                        .product-card__available
+                            .out Нет в наличии
+                            .order Заказать пошив
+                        .product-card__control
+                            button.btn.btn--cart.js-modal(type='button' data-modal='#product-options')
+                                | купить
+                                +icon('cart')
+                        a.product-card__inst(href='/') Что если в наличии нет моего размера?
+                    .product-card__box
+
+                        p.
+                            Худи Mountainman - абсолютный топ продаж среди худи для катания.
+                            Создана для сноубордистов и лыжников, в ней ты будешь уверенно чувствовать себя как на
+                            склоне, так и в городской среде, а удлиненный крой защитит от ветра и снега.
+                            Идеально для горнолыжного спорта и походов в снежные и холодные путешествия!
+                        h3 Ткань
+                        p Плотный Футер с начесом на изнанке. (340 г/м2)
+                        h3 Состав
+                        p Хлопок 80% Полиэстер 20% для оптимальной работы в холодных и влажных условиях.
+                        h3 Крой
+                        p Унисекс. Удлиненный и свободный, глубокий капюшон налезает на шлем, высокий ворот закрывает лицо от ветра.
+                        h3 Полезные мелочи:
+                        ul
+                            li манжеты от снега в рукавах
+                            li карман для ски-пасса
+                            li карман-кенгруру на молниях для телефона
+                            li встроенная в ворот балаклава.
+                        p Мы создаем профессиональную горнолыжную одежду с учетом потребностей райдеров!
+                        p Сделано в России!
+                    .product-card__box
+                        .product-card__box-title Характеристики товара
+                        ul.product-card__box-list
+
+                            li
+                                span Тип одежды
+                                span Сноубордическое худи
+                            li
+                                span Материал
+                                span Футер
+                            li
+                                span Инструкция по уходу
+                                span машинная стирка при 40C
+                            li
+                                span Цвет
+                                span Черный
+                            li
+                                span Состав материала
+                                span хлопок 80% полиэстер 20%
+                            li
+                                span ДxШxВ
+                                span 500x450x70 мм
+                            li
+                                span Вес
+                                span 800 г
+
+    +modal('added-cart')
+        .modal__body
+            .added-cart
+                .added-cart__sign
+                    +icon('check')
+                .added-cart__title Товар добавлен в корзину
+                .added-cart__btns
+                    a.btn.btn--dark-cart(href='/cart.html')
+                        |перейти в корзину
+                        +icon('cart')
+                    a.btn.btn--highlight(href='/category.html')
+                        | продолжить покупки
+                        +icon('arr-back')

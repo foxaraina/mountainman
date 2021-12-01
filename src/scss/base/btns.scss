@@ -1,0 +1,243 @@
+.btn {
+    cursor: pointer;
+
+    &.btn--highlight {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fb2b3a;
+        border: 1px solid #fb2b3a;
+        color: #fff;
+        font-weight: 900;
+        font-size: 18px;
+        padding: 5px 20px;
+        height: 44px;
+
+        .icon {
+            fill: #fff;
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: #144d6f;
+            border-color: #144d6f;
+        }
+    }
+
+    &.btn--black {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #222;
+        border: 1px solid #222;
+        color: #fff;
+        font-weight: 900;
+        font-size: 18px;
+        padding: 5px 20px;
+        height: 44px;
+
+        .icon {
+            fill: #fff;
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: $highlight;
+            border-color: $highlight;
+        }
+    }
+
+    &.btn--white {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        color: #000;
+        font-weight: 900;
+        font-size: 18px;
+        padding: 5px 20px;
+        height: 44px;
+
+        .icon {
+            fill: #000;
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: $highlight;
+            color: #fff;
+
+            .icon {
+                fill: #fff;
+            }
+        }
+    }
+
+    &.btn--grey {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(196, 196, 196, 0.2);
+        font-size: 15px;
+        padding: 5px 15px;
+        height: 45px;
+        color: #fff;
+
+        .icon {
+            fill: #c4c4c4;
+            margin-right: 12px;
+        }
+
+        &:hover {
+            background-color: $highlight;
+            color: #fff;
+
+            .icon {
+                fill: #fff;
+            }
+        }
+    }
+
+    &.btn--block {
+        display: flex;
+        width: 100%;
+    }
+
+    &.btn--icon-next {
+        .icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &.btn--download {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fb2b3a;
+        color: #fff;
+        font-weight: 900;
+        font-size: 18px;
+        padding: 5px 20px;
+        height: 44px;
+
+        .icon {
+            fill: #fff;
+            margin-left: 10px;
+            transform: rotate(-90deg);
+        }
+
+        &:hover {
+            background-color: #222;
+        }
+    }
+
+    &.btn--calc {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fb2b3a;
+        color: #fff;
+        font-weight: 900;
+        font-size: 18px;
+        padding: 5px 20px;
+        height: 44px;
+
+        .icon {
+            fill: #fff;
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: #222;
+        }
+    }
+
+    &.btn--lg {
+        height: 64px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    &.btn--cart {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fb2b3a;
+        border: 1px solid #fb2b3a;
+        color: #fff;
+        font-weight: 900;
+        font-size: 18px;
+        padding: 5px 20px;
+        height: 44px;
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            fill: #fff;
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: #222;
+            border-color: #222;
+        }
+    }
+
+    &.btn--dark-cart {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #222;
+        border-color: #222;
+        color: #fff;
+        font-weight: 900;
+        font-size: 18px;
+        padding: 5px 20px;
+        height: 44px;
+
+        .icon {
+            width: 18px;
+            height: 18px;
+            fill: #fff;
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: #fb2b3a;
+            border: 1px solid #fb2b3a;
+        }
+    }
+
+    &.btn--favourite {
+        background-color: transparent;
+        border: 0;
+        z-index: 10;
+
+        .icon {
+            font-size: 27px;
+            fill: #c4c4c4;
+            transition: .3s ease;
+        }
+
+        &.added, &:hover {
+            .icon {
+                fill: $highlight;
+            }
+        }
+    }
+}
+
+.btn-delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 0;
+
+    &:hover {
+        .icon {
+            fill: #000;
+            stroke: #000;
+        }
+    }
+}

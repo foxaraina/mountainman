@@ -1,0 +1,28 @@
+mixin header(data)
+    header.header
+        .header__container
+            .header__top
+                .header__top-list
+                    a(href='/') Помощь
+                    a(href='/') Подписаться
+                    a(href='/') Контакты
+                .header__top-list
+                    a(href='/') О бренде
+                    a(href='/') Сотрудничество
+                    a(href='/') Где купить
+            .header__body
+                .header__body-left
+                    a.header__catalog(href='/') Каталог
+                a.header__logo(href='/')
+                    img(src='img/logo.webp' alt='logo')
+                .header__body-right
+                    .header__socials
+                        a(href='/' target='_blank')
+                            +icon('vk')
+                        a(href='/' target='_blank')
+                            +icon('inst')
+                        a(href='/' target='_blank')
+                            +icon('tg')
+                    a.header__cart(href='/')
+                        +icon('cart')
+                        span.header__cart-number 0

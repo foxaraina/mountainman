@@ -1,0 +1,111 @@
+extends ../template/layout
+include ../blocks/product/mixin
+
+
+block variables
+    -
+        var title = 'Mountainman'
+
+block content
+    .index-banner
+        +srcsetRetinaImg('img/index-top', 'jpg')
+        .index-banner__content
+            .index-banner__title ОДЕЖДА ДЛЯ ТВОИХ ЛУЧШИХ ПРИКЛЮЧЕНИЙ
+            .index-banner__subtitle Бесплатная доставка при заказе от 5000 рублей
+    .container
+        h1 Сноубордическое худи и аксессуары
+        .categories-grid
+            a.categories-grid__item(href='/')
+                +srcsetRetinaImg('img/catagory-1', 'jpg')
+                .categories-grid__item-content
+                    .categories-grid__item-title Анораки
+                    .categories-grid__item-btn Выбрать и купить
+            a.categories-grid__item(href='/')
+                +srcsetRetinaImg('img/category-2', 'jpg')
+                .categories-grid__item-content
+                    .categories-grid__item-title Анораки
+                    .categories-grid__item-btn Выбрать и купить
+            a.categories-grid__item(href='/')
+                +srcsetRetinaImg('img/category-3', 'jpg')
+                .categories-grid__item-content
+                    .categories-grid__item-title Анораки
+                    .categories-grid__item-btn Выбрать и купить
+            a.categories-grid__item(href='/')
+                +srcsetRetinaImg('img/catagory-1', 'jpg')
+                .categories-grid__item-content
+                    .categories-grid__item-title Анораки
+                    .categories-grid__item-btn Выбрать и купить
+            a.categories-grid__item(href='/')
+                +srcsetRetinaImg('img/category-2', 'jpg')
+                .categories-grid__item-content
+                    .categories-grid__item-title Анораки
+                    .categories-grid__item-btn Выбрать и купить
+            a.categories-grid__item(href='/')
+                +srcsetRetinaImg('img/category-3', 'jpg')
+                .categories-grid__item-content
+                    .categories-grid__item-title Анораки
+                    .categories-grid__item-btn Выбрать и купит
+        .products-feed
+            .products-feed__title Популярные товары
+            .products-feed__row
+                +product-short({
+                    short: true,
+                    src1: 'img/product-1',
+                    src2: 'img/product-1-1',
+                    name: 'Сноубордическое худи "LAVANDA"',
+                    price: ['5 490 ₽']
+                })
+                +product-short({
+                    short: true,
+                    src1: 'img/product-2',
+                    src2: 'img/product-2-1',
+                    name: 'Тай-дай Оверсайз костюм MountainMan SUNSET',
+                    price: ['5 490 ₽']
+                })
+                +product-short({
+                    short: true,
+                    src1: 'img/product-3',
+                    src2: 'img/product-3-1',
+                    name: 'Анорак "BANANA"',
+                    price: ['5 490 ₽']
+                })
+                +product-short({
+                    short: true,
+                    src1: 'img/product-4',
+                    src2: 'img/product-4-1',
+                    name: 'Полукомбинезон "Sent Powder"',
+                    price: ['5 490 ₽']
+                })
+        .instagram-feed
+            .instagram-feed__title Мы в Instagram
+            .instagram-feed__row
+                a.instagram-feed__item(href='/')
+                    +srcsetRetinaImg('img/inst-1', 'jpg')
+                    .instagram-feed__item-cover.
+                        @mountainman_krd: Понедельник не повод грустить 😉🤟🏽
+                        Особенно когда в горах выпала...
+                a.instagram-feed__item(href='/')
+                    +srcsetRetinaImg('img/inst-2', 'jpg')
+                    .instagram-feed__item-cover.
+                        @mountainman_krd: Понедельник не повод грустить 😉🤟🏽
+                        Особенно когда в горах выпала...
+                a.instagram-feed__item(href='/')
+                    +srcsetRetinaImg('img/inst-3', 'jpg')
+                    .instagram-feed__item-cover.
+                        @mountainman_krd: Понедельник не повод грустить 😉🤟🏽
+                        Особенно когда в горах выпала...
+                a.instagram-feed__item(href='/')
+                    +srcsetRetinaImg('img/inst-4', 'jpg')
+                    .instagram-feed__item-cover.
+                        @mountainman_krd: Понедельник не повод грустить 😉🤟🏽
+                        Особенно когда в горах выпала...
+                a.instagram-feed__item(href='/')
+                    +srcsetRetinaImg('img/inst-5', 'jpg')
+                    .instagram-feed__item-cover.
+                        @mountainman_krd: Понедельник не повод грустить 😉🤟🏽
+                        Особенно когда в горах выпала...
+                a.instagram-feed__item(href='/')
+                    +srcsetRetinaImg('img/inst-6', 'jpg')
+                    .instagram-feed__item-cover.
+                        @mountainman_krd: Понедельник не повод грустить 😉🤟🏽
+                        Особенно когда в горах выпала...

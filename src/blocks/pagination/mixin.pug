@@ -1,0 +1,5 @@
+mixin pagination(data=[1,2,3,4])
+    ul.pagination
+        each item ,index in data
+            li(class={'active': index==1})
+                a(href='#')=item

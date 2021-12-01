@@ -1,0 +1,143 @@
+.link {
+    color: #000;
+
+    &:hover {
+        color: $highlight;
+    }
+    &:visited {
+        color: #144d6f;
+    }
+}
+
+.content-row {
+    display: flex;
+    margin: 0 -30px;
+
+    @include mq('tablet', 'max') {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    &__col {
+        padding:  0 30px;
+
+        @include mq('tablet', 'max') {
+            padding: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.float-block {
+
+    &.float-block--right {
+
+        .float-block__img {
+            float: right;
+            margin-left: 60px;
+            margin-bottom: 60px;
+        }
+    }
+
+    &.float-block--left {
+
+        .float-block__img {
+            float: left;
+            margin-right: 60px;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.figure-img {
+
+    figcaption {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        color: #fff;
+        background-color: $highlight;
+        padding: 12px 20px;
+    }
+}
+
+.lead {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 1px solid #000;
+    margin: 40px 0;
+
+    @include mq('tablet', 'max') {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    p {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0;
+    }
+
+    &__img {
+        flex-shrink: 0;
+
+        @include mq('tablet', 'max') {
+            margin-top: 20px;
+        }
+    }
+
+    &.lead--sm {
+        flex-direction: column;
+        margin: 0;
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.comment {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #666666;
+}
+
+hr {
+    margin: 30px 0;
+    border-color: #666;
+}
+
+.full-width-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -60px;
+
+    @include mq('desktop', 'max') {
+        margin-left: -30px;
+    }
+
+    @include mq('laptop', 'max') {
+        margin-left: -15px;
+    }
+
+    picture {
+        background-color: #000;
+
+        img {
+            opacity: .7;
+        }
+    }
+}

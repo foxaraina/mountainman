@@ -1,0 +1,318 @@
+@import "../helpers/variables";
+
+input, textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    transition: .3s ease;
+
+    &:focus {
+        outline: none;
+
+        &::placeholder {
+            color: transparent !important;
+        }
+    }
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance:none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 10px;
+
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'],
+    input[type='password'],
+    textarea
+    {
+        background-color: rgba(#fff, .2);
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        height: 55px;
+        padding: 17px 20px;
+        max-width: 370px;
+        width: 100%;
+        font-size: 18px;
+
+        @include mq('phone', 'max') {
+            max-width: 100%;
+        }
+
+        &::placeholder {
+            color: #fff;
+        }
+    }
+
+    &.error {
+        input[type='text'],
+        input[type='tel'],
+        input[type='email'],
+        input[type='password'],
+        textarea {
+            border: 1px solid $highlight;
+            color: $highlight !important;
+        }
+
+        label {
+            color: $highlight;
+            font-size: 0;
+
+            .error-text {
+                display: block;
+                font-size: 12px;
+                line-height: 14px;
+                color: $highlight;
+            }
+        }
+    }
+
+    &__error {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 12px;
+        color: $highlight;
+        display: none;
+    }
+    
+    label {
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+        color: #666666;
+        margin-bottom: 3px;
+
+        .error-text {
+            display: none;
+        }
+    }
+
+    &__hit {
+        font-size: 12px;
+        line-height: 18px;
+        color: #666666;
+        margin-top: 7px;
+    }
+}
+
+.allow-checkbox {
+    position: relative;
+    margin-top: 23px;
+    
+    input[type='checkbox'] {
+        opacity: 0;
+        position: absolute;
+        
+        + label {
+            display: block;
+            position: relative;
+            padding-left: 29px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #fff;
+            cursor: pointer;
+
+            a {
+                color: inherit;
+
+                &:hover {
+                    color: $highlight;
+                }
+            }
+
+            &:before {
+                content: '';
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: $base-grey;
+                transition: .3s ease;
+            }
+
+            &:after {
+                content: '';
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                position: absolute;
+                left: 3px;
+                top: 3px;
+                background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='black' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.2121 9.60922C4.1071 9.71484 3.96384 9.77376 3.81503 9.77376C3.66621 9.77376 3.52296 9.71484 3.41795 9.60922L0.246821 6.43757C-0.0822736 6.10847 -0.0822736 5.57482 0.246821 5.24635L0.643894 4.84917C0.973091 4.52008 1.50612 4.52008 1.83522 4.84917L3.81503 6.82909L9.16476 1.47924C9.49396 1.15015 10.0275 1.15015 10.3561 1.47924L10.7532 1.87642C11.0823 2.20551 11.0823 2.73906 10.7532 3.06764L4.2121 9.60922Z'/%3E%3C/svg%3E%0A");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                opacity: 0;
+                transition: .3s ease;
+            }
+
+            &:hover {
+
+                &:before {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        &:checked {
+
+            + label {
+
+                &:before {
+                    background-color: #fff;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &.allow-checkbox--dark {
+        input[type='checkbox'] {
+            + label {
+                color: #000;
+
+                &:before {
+                    background-color: #000;
+                }
+
+                &:after {
+                    background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' fill='white' viewBox='0 0 11 11' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.2121 9.60922C4.1071 9.71484 3.96384 9.77376 3.81503 9.77376C3.66621 9.77376 3.52296 9.71484 3.41795 9.60922L0.246821 6.43757C-0.0822736 6.10847 -0.0822736 5.57482 0.246821 5.24635L0.643894 4.84917C0.973091 4.52008 1.50612 4.52008 1.83522 4.84917L3.81503 6.82909L9.16476 1.47924C9.49396 1.15015 10.0275 1.15015 10.3561 1.47924L10.7532 1.87642C11.0823 2.20551 11.0823 2.73906 10.7532 3.06764L4.2121 9.60922Z'/%3E%3C/svg%3E%0A");
+                }
+            }
+        }
+    }
+}
+
+.form-checkbox {
+    position: relative;
+    margin-top: 23px;
+
+    input[type='checkbox'] {
+        opacity: 0;
+        position: absolute;
+
+        + label {
+            display: block;
+            position: relative;
+            padding-left: 29px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #000;
+            cursor: pointer;
+
+            a {
+                color: #000;
+
+                &:hover {
+                    color: $highlight;
+                }
+            }
+
+            &:before {
+                content: '';
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: $base-grey;
+                transition: .3s ease;
+            }
+
+            &:after {
+                content: '';
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                position: absolute;
+                left: 3px;
+                top: 3px;
+                background-image: url("data:image/svg+xml,%3Csvg width='11' height='11' viewBox='0 0 11 11' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.2121 9.60922C4.1071 9.71484 3.96384 9.77376 3.81503 9.77376C3.66621 9.77376 3.52296 9.71484 3.41795 9.60922L0.246821 6.43757C-0.0822736 6.10847 -0.0822736 5.57482 0.246821 5.24635L0.643894 4.84917C0.973091 4.52008 1.50612 4.52008 1.83522 4.84917L3.81503 6.82909L9.16476 1.47924C9.49396 1.15015 10.0275 1.15015 10.3561 1.47924L10.7532 1.87642C11.0823 2.20551 11.0823 2.73906 10.7532 3.06764L4.2121 9.60922Z'/%3E%3C/svg%3E%0A");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                opacity: 0;
+                transition: .3s ease;
+            }
+
+            &:hover {
+
+                &:before {
+                    background-color: #000;
+                }
+            }
+        }
+
+        &:checked {
+
+            + label {
+
+                &:before {
+                    background-color: #222;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.input-upload {
+    position: relative;
+    margin: 30px 0;
+
+    input[type='file'] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+
+        +label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            .field {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 44px;
+                background: rgba(196, 196, 196, 0.1);
+                border: 1px dashed rgba(255, 255, 255, 0.7);
+                margin-right: 11px;
+                font-size: 14px;
+                line-height: 17px;
+                color: #FFFFFF;
+                padding: 5px 15px;
+                min-width: 205px;
+            }
+
+            .btn {
+
+            }
+        }
+    }
+}

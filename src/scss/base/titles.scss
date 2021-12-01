@@ -1,0 +1,50 @@
+h1, h2, h3, h4, h5 {
+    margin-top: 0;
+}
+
+.title {
+
+    &.title--lg {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 59px;
+        margin-bottom: 30px;
+
+        @include mq('tablet', 'max') {
+            font-size: 24px;
+            line-height: (30/24);
+            margin-bottom: 15px;
+        }
+    }
+
+    &.title--md {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 45px;
+        margin-bottom: 24px;
+
+        @include mq('tabletl', 'max') {
+            font-size: 24px;
+            line-height: (30/24);
+            margin-bottom: 10px;
+        }
+    }
+
+    &.title--sm {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    &.title--bordered {
+        border-bottom: 1px solid #000;
+
+        @include mq('tablet-small', 'max') {
+            border-bottom-width: 0;
+        }
+    }
+
+    &.title--grey {
+        color: #c4c4c4;
+    }
+}

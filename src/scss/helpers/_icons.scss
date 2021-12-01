@@ -1,0 +1,94 @@
+.icon {
+    width: 1em;
+    height: 1em;
+
+    &-arr {
+        width: 11px;
+        height: 11px;
+    }
+
+    &-cart {
+        width: 29px;
+        height: 29px;
+    }
+
+    &-delivery {
+        width: 60px;
+        height: 40px;
+    }
+
+    &-infinity {
+        width: 57px;
+        height: 24px;
+    }
+
+    &-winner {
+        width: 53px;
+        height: 48px;
+    }
+
+    &-docs {
+        width: 38px;
+        height: 50px;
+    }
+
+    &-close {
+        font-size: 20px;
+    }
+
+    &-inst {
+        fill: #fff;
+        fill-opacity: .3;
+        font-size: 26px;
+    }
+
+    &-fb {
+        fill: #fff;
+        fill-opacity: .3;
+        font-size: 26px;
+    }
+
+    &-vk {
+        fill: #fff;
+        fill-opacity: .3;
+        font-size: 32px;
+    }
+
+    &-tg {
+        fill: #fff;
+        fill-opacity: .3;
+        font-size: 32px;
+    }
+
+    &-visa, &-visa-color {
+        width: 41px;
+        height: 41px;
+    }
+
+    &-mastercard, &-mastercard-color {
+        width: 152px;
+        height: 35px;
+    }
+
+    &-made-in-russia {
+        width: 200px;
+        height: 60px;
+    }
+
+    &-trash {
+        fill: #fb2b3a;
+        stroke: #fb2b3a;
+        stroke-width: 0.4;
+        font-size: 17px;
+    }
+
+    &-telephone {
+        fill: #fb2b3a;
+        stroke: #fb2b3a;
+        font-size: 26px;
+    }
+
+    &-share {
+        fill: #c4c4c4;
+    }
+}

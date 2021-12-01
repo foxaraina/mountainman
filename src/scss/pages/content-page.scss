@@ -1,0 +1,88 @@
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+.content-grid {
+
+    .content-grid__box {
+
+        &.content-grid__box--dark {
+            background-color: #222;
+            color: #fff;
+        }
+    }
+
+    .content-grid__block {
+        margin-top: 80px;
+        margin-bottom: 80px;
+
+        @include mq('tablet', 'max') {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.content-grid__block-lg {
+            max-width: 1220px;
+            width: 100%;
+        }
+
+        &.content-grid__block-md {
+            max-width: 946px;
+            width: 100%;
+            @include mq('laptop', 'max') {
+                max-width: 100%;
+            }
+        }
+
+        &.content-grid__block-sm {
+            max-width: 825px;
+            width: 100%;
+
+            @include mq('laptop', 'max') {
+                max-width: 100%;
+            }
+        }
+
+        &.content-grid__block-xs {
+            max-width: 520px;
+            width: 100%;
+        }
+
+        &-row {
+            display: flex;
+            width: 100%;
+
+            @include mq('tablet', 'max') {
+                flex-wrap: wrap;
+            }
+        }
+
+        &-col {
+            width: 33.3333%;
+
+            @include mq('tablet', 'max') {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .right-align {
+        margin-left: auto;
+    }
+}
+
+.translate-content {
+    padding-bottom: 200px;
+
+    + div > div:first-child {
+        margin-top: -150px;
+    }
+}

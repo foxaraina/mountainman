@@ -1,0 +1,33 @@
+mixin footer()
+    footer.footer
+        .footer__container
+            .footer__row
+                .footer__contacts
+                    a.footer__logo(href='/')
+                        img(src='img/logo-footer.png' alt='logo')
+                    .footer__socials
+                        a(href='/' target='_blank')
+                            +icon('vk')
+                        a(href='/' target='_blank')
+                            +icon('inst')
+                        a(href='/' target='_blank')
+                            +icon('tg')
+                .footer__menu
+                    .footer__menu-list
+                        a(href='/') Способы оплаты
+                        a(href='/') Доставка
+                        a(href='/') Обмен/возврат
+                        a(href='/') Таблица размеров
+                        a(href='/') Контакты
+
+                    .footer__menu-list
+                        a(href='/') О бренде
+                        a(href='/') Подарочные карты
+                        a(href='/') Сотрудничество
+
+                    .footer__menu-list
+                        a(href='/') Политика о персональных данных
+                        a(href='/') Публичная оферта
+            .footer__row
+                .footer__bottom
+                    .footer__copyright © 2021 MountainMan

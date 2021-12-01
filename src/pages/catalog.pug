@@ -1,0 +1,113 @@
+extends ../template/layout
+include ../blocks/product/mixin
+include ../blocks/pagination/mixin
+
+block variables
+    -
+        var title = 'Mountainman'
+
+block content
+    .catalog-header
+        +srcsetRetinaImg('img/catalog-top', '.jpg')
+        .catalog-header__container
+            h1.catalog-header__title Каталог Товаров
+    .container
+        .row
+            aside.sidebar
+                .catalog-filter
+                    .catalog-filter__section
+                        .catalog-filter__section-title Тип одежды
+                        .catalog-filter__section-list
+                            - let filterSection1 = ['Анорак', 'Балаклава', 'Оверсайз Костюмы', 'Оверсайз худи']
+                            each item, index in filterSection1
+                                .catalog-filter__section-item
+                                    input(type='checkbox' name='filter-0-' + index id='filter-0-' + index)
+                                    label(for='filter-0-' + index)= item
+                    .catalog-filter__price
+                        div#sliderprice
+                        .catalog-filter__price-controls
+                            input(type='number' id='price-from' name='priceFrom' data-min='1200' value='1200')
+                            input(type='number' id='price-to' name='priceTo' data-max='20000' value='20000')
+                    .catalog-filter__section
+                        .catalog-filter__section-title Цвет
+                        .catalog-filter__section-list
+                            - let filterSection2 = ['Черный', 'Белый', 'Красный', 'Розовый']
+                            each item, index in filterSection2
+                                .catalog-filter__section-item
+                                    input(type='checkbox' name='filter-0-' + index id='filter-1-' + index)
+                                    label(for='filter-1-' + index)= item
+
+            .content
+                .catalog-top-filter
+                    .catalog-search
+                        input(type='search' name='catalog-search')
+                        button(type='button')
+                            +icon('search')
+                    .catalog-sort
+                        .catalog-sort__title Сортировать
+                        select#catalog-sort
+                            option(value='0') По умолчанию
+                            option(value='0') Цена: по возрастанию
+                            option(value='0') Цена: по убыванию
+                            option(value='0') Название: А—Я
+                            option(value='0') Название: Я—А
+                            option(value='0') Порядок: сперва новые
+                            option(value='0') Порядок: сперва старые
+                .catalog-list
+                    +product-item({
+                        src1: 'img/product-img-1',
+                        src2: 'img/product-img-1-1',
+                        name: 'Сноубордическое худи "DARKSIDE"',
+                        code: 'Артикул: 23MMDS',
+                        sizes: true,
+                        available: true,
+                        price: ['5 490 ₽']
+                    })
+                    +product-item({
+                        src1: 'img/product-img-2',
+                        src2: 'img/product-img-2-1',
+                        name: 'Сноубордическое худи "DARKSIDE"',
+                        code: 'Артикул: 23MMDS',
+                        sizes: true,
+                        available: false,
+                        price: ['5 490 ₽']
+                    })
+                    +product-item({
+                        src1: 'img/product-img-3',
+                        src2: 'img/product-img-3-1',
+                        name: 'Сноубордическое худи "DARKSIDE"',
+                        code: 'Артикул: 23MMDS',
+                        sizes: true,
+                        available: true,
+                        price: ['5 490 ₽']
+                    })
+                    +product-item({
+                        src1: 'img/product-img-1',
+                        src2: 'img/product-img-1-1',
+                        name: 'Сноубордическое худи "DARKSIDE"',
+                        code: 'Артикул: 23MMDS',
+                        sizes: true,
+                        available: true,
+                        price: ['5 490 ₽']
+                    })
+                    +product-item({
+                        src1: 'img/product-img-2',
+                        src2: 'img/product-img-2-1',
+                        name: 'Сноубордическое худи "DARKSIDE"',
+                        code: 'Артикул: 23MMDS',
+                        sizes: true,
+                        available: false,
+                        price: ['5 490 ₽']
+                    })
+                    +product-item({
+                        src1: 'img/product-img-3',
+                        src2: 'img/product-img-3-1',
+                        name: 'Сноубордическое худи "DARKSIDE"',
+                        code: 'Артикул: 23MMDS',
+                        sizes: true,
+                        available: true,
+                        price: ['5 490 ₽']
+                    })
+                .load-more
+                    button.btn.btn--black.btn--lg(type='button') Загрузить ещё
+                +pagination

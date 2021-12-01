@@ -1,0 +1,6 @@
+mixin modal(id, classes)
+    .modal(id=id)
+        .modal__inner(class=classes)
+            button.modal__close.js-modal-close(type="button")
+                +icon('close')
+            block

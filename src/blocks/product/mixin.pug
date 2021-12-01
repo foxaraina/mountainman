@@ -1,0 +1,61 @@
+mixin product-short(data)
+    .product
+        a.product__img(href='/')
+            +srcsetRetinaImg(data.src1, '.jpg')
+            +srcsetRetinaImg(data.src2, '.jpg', '', '', false, 'product__img-hover')
+        .product__info
+            a.product__name(href='/')= data.name
+            .product__price
+                if data.price.length === 1
+                    .default= data.price[0]
+                else
+                    .old= data.price[0]
+                    .sale= data.price[1]
+
+
+mixin product-item(data)
+    .product
+        a.product__img(href='/')
+            +srcsetRetinaImg(data.src1, '.jpg')
+            +srcsetRetinaImg(data.src2, '.jpg', '', '', false, 'product__img-hover')
+        .product__info
+            a.product__name(href='/')= data.name
+            .product__code= data.code
+            .product__price
+                if data.price.length === 1
+                    .default= data.price[0]
+                else
+                    .old= data.price[0]
+                    .sale= data.price[1]
+            if data.sizes
+                .product__sizes
+                    .product__sizes-name Размер
+                    .product__sizes-list
+                        .product__sizes-item
+                            input(type='radio' id=data.id + '-size-1')
+                            label(for=data.id + '-size-1') XS
+                        .product__sizes-item
+                            input(type='radio' id=data.id + '-size-2')
+                            label(for=data.id + '-size-2') S
+                        .product__sizes-item
+                            input(type='radio' id=data.id + '-size-3')
+                            label(for=data.id + '-size-3') M
+                        .product__sizes-item
+                            input(type='radio' id=data.id + '-size-4')
+                            label(for=data.id + '-size-4') L
+                        .product__sizes-item
+                            input(type='radio' id=data.id + '-size-5')
+                            label(for=data.id + '-size-5') XL
+                        .product__sizes-item
+                            input(type='radio' id=data.id + '-size-6')
+                            label(for=data.id + '-size-6') XXL
+            if data.available
+                .product__available
+                    .success Есть в наличии
+            else
+                .product__available
+                    .out Нет в наличии
+                    .product__available-order Заказать пошив
+            .product__controls
+                a.product__controls-more(href='/') Подробнее
+                button.product__controls-cart(type='button' class='js-add-cart') В корзину

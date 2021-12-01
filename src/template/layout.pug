@@ -1,0 +1,44 @@
+include ./mixins/icon
+include ./mixins/text-fields
+include ./mixins/images
+include ./mixins/base-mixins
+include ../blocks/header/mixin
+include ../blocks/footer/mixin
+
+doctype html
+html(lang='ru')
+    -
+        var title = 'Mountainman'
+
+    block variables
+
+    head
+        title= title || 'Mountainman'
+
+        meta(charset='utf-8')
+        meta(name='theme-color' content='#000')
+        meta(name='description' content=description || '')
+        meta(http-equiv='x-ua-compatible' content='ie=edge')
+        meta(name='format-detection' content='telephone=no')
+        meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0')
+        link(rel='shortcut icon' type='image/x-icon' href='img/favicon/favicon.ico')
+
+        link(as='script' href='js/main.js' rel='preload')
+        link(as='font' href='/fonts/Gilroy-Bold.woff2' rel='preload' type='font/woff2' crossorigin)
+        link(as='font' href='/fonts/Gilroy-Black.woff2' rel='preload' type='font/woff2' crossorigin)
+        link(as='font' href='/fonts/Gilroy-Regular.woff2' rel='preload' type='font/woff2' crossorigin)
+        link(rel='stylesheet' href='css/main.css')
+
+        block styles
+
+    body
+        main.main
+
+            .page
+                +header()
+
+                block content
+                +footer()
+
+        script(src='js/main.js')
+

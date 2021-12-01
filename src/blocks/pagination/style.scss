@@ -1,0 +1,40 @@
+.pagination {
+    border-top: 1px solid #000;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+
+        &.active {
+
+            a {
+                background-color: #000;
+                color: #fff;
+
+                &:hover {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        color: #000;
+        font-size: 18px;
+        line-height: 36px;
+        font-weight: 700;
+        margin: 0 5px;
+
+        &:hover {
+            color: $highlight;
+        }
+    }
+}
