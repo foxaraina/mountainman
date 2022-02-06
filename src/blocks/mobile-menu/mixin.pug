@@ -1,0 +1,23 @@
+mixin mobile-menu()
+    .mobile-menu
+        button.mobile-menu__close.js-mobile-menu-close(type='button')
+            +icon('close')
+        .mobile-menu__container
+            .mobile-menu__list
+                a(href='#') Одежда
+                a(href='#') Аксессуары
+                a(href='#') О бренде
+                a(href='#') Сотрудничество
+                a(href='#') Где купить?
+                a(href='#') Помощь
+
+            .mobile-menu__footer
+                .mobile-menu__slogan С нами ты станешь профи в сноубординге и путешествиях!
+                .mobile-menu__socials
+                    a(href='/' target='_blank')
+                        +icon('vk')
+                    a(href='/' target='_blank')
+                        +icon('inst')
+                    a(href='/' target='_blank')
+                        +icon('tg')
+                button.js-modal.mobile-menu__subscribe(data-modal='subscribe-form') Подписаться

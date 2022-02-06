@@ -165,14 +165,39 @@
         background-color: #fb2b3a;
         border: 1px solid #fb2b3a;
         color: #fff;
-        font-weight: 900;
-        font-size: 18px;
+        font-weight: 700;
+        font-size: 16px;
         padding: 5px 20px;
         height: 44px;
 
         .icon {
-            width: 18px;
-            height: 18px;
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: #222;
+            border-color: #222;
+        }
+    }
+
+    &.btn--sew {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fb2b3a;
+        border: 1px solid #fb2b3a;
+        color: #fff;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 5px 20px;
+        height: 44px;
+
+        .icon {
+            width: 30px;
+            height: 30px;
             fill: #fff;
             margin-left: 10px;
         }

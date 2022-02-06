@@ -4,6 +4,7 @@ include ./mixins/images
 include ./mixins/base-mixins
 include ../blocks/header/mixin
 include ../blocks/footer/mixin
+include ../blocks/mobile-menu/mixin
 
 doctype html
 html(lang='ru')
@@ -32,13 +33,27 @@ html(lang='ru')
         block styles
 
     body
-        main.main
-
-            .page
-                +header()
+        .page
+            +mobile-menu()
+            +header()
+            main.main
 
                 block content
-                +footer()
+            +footer()
+            .bottom-menu
+                button.bottom-menu__item.js-search(type='button')
+                    +icon('search')
+                    span.name Поиск
+                a.bottom-menu__item(href='/catalog.html')
+                    +icon('hudi')
+                    span.name Каталог
+                a.bottom-menu__item(href='#')
+                    +icon('wh')
+                    span.name WhatsApp
+                a.bottom-menu__item(href='#')
+                    +icon('cart')
+                    span.name Корзина
+                        .number 0
 
         script(src='js/main.js')
 

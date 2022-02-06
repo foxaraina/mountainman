@@ -32,22 +32,22 @@ mixin product-item(data)
                     .product__sizes-name Размер
                     .product__sizes-list
                         .product__sizes-item
-                            input(type='radio' id=data.id + '-size-1')
+                            input(type='radio' id=data.id + '-size-1' name=data.id+'size')
                             label(for=data.id + '-size-1') XS
                         .product__sizes-item
-                            input(type='radio' id=data.id + '-size-2')
+                            input(type='radio' id=data.id + '-size-2' name=data.id+'size')
                             label(for=data.id + '-size-2') S
                         .product__sizes-item
-                            input(type='radio' id=data.id + '-size-3')
+                            input(type='radio' id=data.id + '-size-3' name=data.id+'size')
                             label(for=data.id + '-size-3') M
                         .product__sizes-item
-                            input(type='radio' id=data.id + '-size-4')
+                            input(type='radio' id=data.id + '-size-4' name=data.id+'size')
                             label(for=data.id + '-size-4') L
                         .product__sizes-item
-                            input(type='radio' id=data.id + '-size-5')
+                            input(type='radio' id=data.id + '-size-5' name=data.id+'size')
                             label(for=data.id + '-size-5') XL
                         .product__sizes-item
-                            input(type='radio' id=data.id + '-size-6')
+                            input(type='radio' id=data.id + '-size-6' name=data.id+'size')
                             label(for=data.id + '-size-6') XXL
             if data.available
                 .product__available

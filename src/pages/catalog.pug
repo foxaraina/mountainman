@@ -24,9 +24,11 @@ block content
                                     input(type='checkbox' name='filter-0-' + index id='filter-0-' + index)
                                     label(for='filter-0-' + index)= item
                     .catalog-filter__price
+                        .catalog-filter__section-title Фильтровать по цене
                         div#sliderprice
                         .catalog-filter__price-controls
                             input(type='number' id='price-from' name='priceFrom' data-min='1200' value='1200')
+                            |&nbsp;-&nbsp;
                             input(type='number' id='price-to' name='priceTo' data-max='20000' value='20000')
                     .catalog-filter__section
                         .catalog-filter__section-title Цвет
@@ -39,8 +41,9 @@ block content
 
             .content
                 .catalog-top-filter
+                    button.catalog-filer-mobile-btn.js-mobile-filter(type='button') Фильтр
                     .catalog-search
-                        input(type='search' name='catalog-search')
+                        input(type='search' name='catalog-search' placeholder='поиск по каталогу')
                         button(type='button')
                             +icon('search')
                     .catalog-sort

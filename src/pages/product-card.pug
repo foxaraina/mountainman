@@ -5,25 +5,74 @@ block variables
     -
         var title = 'Mountainman'
 
+mixin back()
+    a.back-page(href='#')
+        span.back-page__icon
+            +icon('arr-back')
+        | назад в каталог
 
 block content
     .product-card
         .product-card__inner
+            +back()
             .product-card__body
                 .product-card__gallery
                     .product-card__gallery-thumbs
-                        a.js-product-card-thumb.current(href='#' data-srcset='img/product-card/product-big.jpg 1x, img/product-card/product-big@2x.jpg 2x' data-src='img/product-card/product-big.jpg')
-                            +srcsetRetinaImg('img/product-card/product-small-1', 'jpg', 130, 130, 'img/placeholder-130.svg')
-                        a.js-product-card-thumb(href='#' data-srcset='img/product-card/product-small-1.jpg 1x, img/product-card/product-small-1@2x.jpg 2x' data-src='img/product-card/product-small-1.jpg')
-                            +srcsetRetinaImg('img/product-card/product-small-2', 'jpg', 130, 130, 'img/placeholder-130.svg')
-                        a.js-product-card-thumb(href='#' data-srcset='img/product-card/product-big.jpg 1x, img/product-card/product-big@2x.jpg 2x' data-src='img/product-card/product-big.jpg')
-                            +srcsetRetinaImg('img/product-card/product-small-3', 'jpg', 130, 130, 'img/placeholder-130.svg')
-                    .product-card__gallery-big
-                        a(href='img/product-card/product-big.jpg')
-                            +srcsetRetinaImg('img/product-card/product-big', 'jpg', 640, 640, 'img/placeholder-130.svg')
+                        .product-card__gallery-thumbs-item.js-product-card-thumb.current
+                            +srcsetImg('img/product-card/product-card-sm-1', 'jpg', 80, 100, 'img/placeholder-130.svg')
+                        .product-card__gallery-thumbs-item.js-product-card-thumb
+                            +srcsetImg('img/product-card/product-card-sm-2', 'jpg', 80, 100, 'img/placeholder-130.svg')
+                        .product-card__gallery-thumbs-item.js-product-card-thumb
+                            +srcsetImg('img/product-card/product-card-sm-3', 'jpg', 80, 100, 'img/placeholder-130.svg')
+                        .product-card__gallery-thumbs-item.js-product-card-thumb
+                            +srcsetImg('img/product-card/product-card-sm-4', 'jpg', 80, 100, 'img/placeholder-130.svg')
+                        .product-card__gallery-thumbs-item.js-product-card-thumb
+                            +srcsetImg('img/product-card/product-card-sm-5', 'jpg', 80, 100, 'img/placeholder-130.svg')
+                        .product-card__gallery-thumbs-item.js-product-card-thumb
+                            +srcsetImg('img/product-card/product-card-sm-6', 'jpg', 80, 100, 'img/placeholder-130.svg')
+                        .product-card__gallery-thumbs-item.js-product-card-thumb
+                            +srcsetImg('img/product-card/product-card-sm-7', 'jpg', 80, 100, 'img/placeholder-130.svg')
+                        .product-card__gallery-thumbs-item.js-product-card-thumb
+                            +srcsetImg('img/product-card/product-card-sm-8', 'jpg', 80, 100, 'img/placeholder-130.svg')
+                        .product-card__gallery-thumbs-item.js-product-card-thumb
+                            +srcsetImg('img/product-card/product-card-sm-9', 'jpg', 80, 100, 'img/placeholder-130.svg')
+                        .product-card__gallery-thumbs-item.js-product-card-thumb
+                            +srcsetImg('img/product-card/product-card-sm-10', 'jpg', 80, 100, 'img/placeholder-130.svg')
+                    .product-card__gallery-big.swiper.js-product-card-slider
+                        .swiper-wrapper
+                            .swiper-slide
+                                a(href='img/product-card/product-card-big-1.jpg' data-fancybox="product-gallery")
+                                    +srcsetImg('img/product-card/product-card-md-1', 'jpg', 640, 800, 'img/placeholder-130.svg')
+                            .swiper-slide
+                                a(href='img/product-card/product-card-big-2.jpg' data-fancybox="product-gallery")
+                                    +srcsetImg('img/product-card/product-card-md-2', 'jpg', 640, 800, 'img/placeholder-130.svg')
+                            .swiper-slide
+                                a(href='img/product-card/product-card-big-3.jpg' data-fancybox="product-gallery")
+                                    +srcsetImg('img/product-card/product-card-md-3', 'jpg', 640, 800, 'img/placeholder-130.svg')
+                            .swiper-slide
+                                a(href='img/product-card/product-card-big-4.jpg' data-fancybox="product-gallery")
+                                    +srcsetImg('img/product-card/product-card-md-4', 'jpg', 640, 800, 'img/placeholder-130.svg')
+                            .swiper-slide
+                                a(href='img/product-card/product-card-big-5.jpg' data-fancybox="product-gallery")
+                                    +srcsetImg('img/product-card/product-card-md-5', 'jpg', 640, 800, 'img/placeholder-130.svg')
+                            .swiper-slide
+                                a(href='img/product-card/product-card-big-6.jpg' data-fancybox="product-gallery")
+                                    +srcsetImg('img/product-card/product-card-md-6', 'jpg', 640, 800, 'img/placeholder-130.svg')
+                            .swiper-slide
+                                a(href='img/product-card/product-card-big-7.jpg' data-fancybox="product-gallery")
+                                    +srcsetImg('img/product-card/product-card-md-7', 'jpg', 640, 800, 'img/placeholder-130.svg')
+                            .swiper-slide
+                                a(href='img/product-card/product-card-big-8.jpg' data-fancybox="product-gallery")
+                                    +srcsetImg('img/product-card/product-card-md-8', 'jpg', 640, 800, 'img/placeholder-130.svg')
+                            .swiper-slide
+                                a(href='img/product-card/product-card-big-9.jpg' data-fancybox="product-gallery")
+                                    +srcsetImg('img/product-card/product-card-md-9', 'jpg', 640, 800, 'img/placeholder-130.svg')
+                            .swiper-slide
+                                a(href='img/product-card/product-card-big-10.jpg' data-fancybox="product-gallery")
+                                    +srcsetImg('img/product-card/product-card-md-10', 'jpg', 640, 800, 'img/placeholder-130.svg')
                 .product-card__content
                     .product-card__top
-                        h1.title.title--md Сноубордическое худи "MARSHMALLOW"
+                        h1.title.title--md Сноубордическое худи MARSHMALLOW
                         .product-card__btand MountainMan
                         .product-card__code Артикул: 1234567
                         .product-card__price 13 050 ₽
@@ -31,30 +80,31 @@ block content
                             .product-card__sizes-name Размер
                             .product-card__sizes-list
                                 .product-card__sizes-item
-                                    input(type='radio' id='product-size-1')
+                                    input.js-choose-size(type='radio' id='product-size-1' name='product-size' data-quanity='0')
                                     label(for='product-size-1') XS
                                 .product-card__sizes-item
-                                    input(type='radio' id='product-size-2')
+                                    input.js-choose-size(type='radio' id='product-size-2' name='product-size' data-quanity='5')
                                     label(for='product-size-2') S
                                 .product-card__sizes-item
-                                    input(type='radio' id='product-size-3')
+                                    input.js-choose-size(type='radio' id='product-size-3' name='product-size' data-quanity='0')
                                     label(for='product-size-3') M
                                 .product-card__sizes-item
-                                    input(type='radio' id='product-size-4')
+                                    input.js-choose-size(type='radio' id='product-size-4' name='product-size' data-quanity='5')
                                     label(for='product-size-4') L
                                 .product-card__sizes-item
-                                    input(type='radio' id='product-size-5')
+                                    input.js-choose-size(type='radio' id='product-size-5' name='product-size' data-quanity='5')
                                     label(for='product-size-5') XL
                                 .product-card__sizes-item
-                                    input(type='radio' id='product-size-6')
+                                    input.js-choose-size(type='radio' id='product-size-6' name='product-size' data-quanity='5')
                                     label(for='product-size-6') XXL
-                        .product-card__available
-                            .out Нет в наличии
-                            .order Заказать пошив
+                            .product-card__sizes-available.js-product-available
                         .product-card__control
-                            button.btn.btn--cart.js-modal(type='button' data-modal='#product-options')
+                            button.btn.btn--cart.js-modal.js-add-cart(type='button' data-modal='#product-added-cart')
                                 | купить
-                                +icon('cart')
+                                +icon('basket')
+                            button.btn.btn--sew.js-modal.js-order-sew(type='button' data-modal='#product-sew')
+                                |заказать пошив
+                                +icon('sew')
                         a.product-card__inst(href='/') Что если в наличии нет моего размера?
                     .product-card__box
 
